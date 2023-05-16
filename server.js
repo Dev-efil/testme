@@ -18,7 +18,7 @@ const server = app.listen(PORT, () => console.log(`Server started on port: ${POR
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000'
+        origin: 'https://thanushkanth.ogilvydigital.net'
     },
 });
 // Function to process the incoming message and generate a response
