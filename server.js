@@ -25,9 +25,15 @@ const server = app.listen(PORT, () => console.log(`Server started on port: ${POR
 // Socket.IO connection event handler
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000'
+        origin: 'https://thanushkanth.ogilvydigital.net'
     },
 });
+// const io = new Server(server, {
+//     cors: {
+//         origin: 'http://localhost:3000'
+//     },
+// });
+
 const processInitialMessage = async () => {
     const _getInitialMessageURL = '/api/v1/yochat/getinitialmessage/';
     try {
