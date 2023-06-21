@@ -25,7 +25,7 @@ const server = app.listen(PORT, () => console.log(`Server started on port: ${POR
 // Socket.IO connection event handler
 const io = new Server(server, {
     cors: {
-        origin: 'https://thanushkanth.ogilvydigital.net'
+        origin: 'https://chat.yobot.ogilvydigital.net'
     },
 });
 // const io = new Server(server, {
@@ -88,6 +88,9 @@ io.on('connection', async (socket) => {
 
             // Emit the initial response to the client
             socket.emit('serverResponse', initialResponse);
+        }
+        else {
+            console.log('here');
         }
     } catch (error) {
         console.error('Error processing initial message:', error);
