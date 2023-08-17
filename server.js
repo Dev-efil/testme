@@ -101,11 +101,7 @@ io.on('connection', async (socket) => {
         try {
             // Process the message and generate a response
             const response = await processMessage(data);
-
-            // Send the response back to the client after a delay of 2 seconds
-            setTimeout(() => {
-                socket.emit('serverResponse', response);
-            }, 2000);
+            socket.emit('serverResponse', response);
         } catch (error) {
             console.error('Error processing message:', error);
         }
